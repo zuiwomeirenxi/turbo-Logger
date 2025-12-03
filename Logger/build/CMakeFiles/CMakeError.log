@@ -1,0 +1,48 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/dragon/Logger/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_96b64 && [1/2] Building CXX object CMakeFiles/cmTC_96b64.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_96b64
+FAILED: cmTC_96b64 
+: && /usr/bin/g++-8  -DCMAKE_HAVE_LIBC_PTHREAD   CMakeFiles/cmTC_96b64.dir/src.cxx.o  -o cmTC_96b64   && :
+/usr/bin/ld: CMakeFiles/cmTC_96b64.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/dragon/Logger/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_06d5e && [1/2] Building CXX object CMakeFiles/cmTC_06d5e.dir/CheckFunctionExists.cxx.o
+[2/2] Linking CXX executable cmTC_06d5e
+FAILED: cmTC_06d5e 
+: && /usr/bin/g++-8  -DCHECK_FUNCTION_EXISTS=pthread_create   CMakeFiles/cmTC_06d5e.dir/CheckFunctionExists.cxx.o  -o cmTC_06d5e  -lpthreads && :
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+

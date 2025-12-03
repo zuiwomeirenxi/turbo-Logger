@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/turbolog/LogBuffer.h
+array
+-
+cstddef
+-
+cstring
+-
+
+../include/turbolog/Logger.h
+cstdarg
+-
+cstddef
+-
+cstdio
+-
+cstring
+-
+fstream
+-
+memory
+-
+string
+-
+chrono
+-
+array
+-
+turbolog/LogBuffer.h
+../include/turbolog/turbolog/LogBuffer.h
+
+/home/dragon/Logger/examples/logger_example.cpp
+iostream
+-
+turbolog/Logger.h
+/home/dragon/Logger/examples/turbolog/Logger.h
+

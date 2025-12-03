@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/home/dragon/Logger/build",
+  "command": "/usr/bin/g++-8   -I../include  -g   -std=c++17 -o CMakeFiles/turbolog_example.dir/examples/main.cpp.o -c /home/dragon/Logger/examples/main.cpp",
+  "file": "/home/dragon/Logger/examples/main.cpp"
+},
+
+{
+  "directory": "/home/dragon/Logger/build",
+  "command": "/usr/bin/g++-8   -I../include  -g   -std=c++17 -o CMakeFiles/turbolog.dir/src/Logger.cpp.o -c /home/dragon/Logger/src/Logger.cpp",
+  "file": "/home/dragon/Logger/src/Logger.cpp"
+}
+]

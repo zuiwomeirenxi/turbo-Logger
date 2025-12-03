@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/macros_example.dir/examples/macros_example.cpp.o  -o macros_example 
